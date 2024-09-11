@@ -26,7 +26,7 @@ export default defineConfig(({ command, mode }) => {
         components: path.resolve(__dirname, 'src/components')
       }
     },
-    base: '/',
+    base: '/garima-international/',
     build: { outDir: 'build' },
     css: { postcss: { plugins: [autoprefixer()] } }
   }
