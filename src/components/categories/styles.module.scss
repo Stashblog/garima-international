@@ -1,0 +1,25 @@
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dynamically adjusts the number of columns */
+    grid-gap: 15px; /* Space between grid items */
+  }
+  
+  .masonryItem {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .masonryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .masonryItem:hover .masonryImage {
+    transform: scale(1.05); 
+  }
+  

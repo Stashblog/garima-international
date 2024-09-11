@@ -1,0 +1,107 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw ;
+  background-image: url('../../images/placeholders/home.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.dashboard {
+  padding: 0 1rem;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &>div{
+    align-self: flex-end;
+  }
+}
+
+.title{
+  text-align: center;
+  font-size: 1.50rem;
+  font-weight: 600;
+  -webkit-text-fill-color: black;
+  padding: 3rem;
+}
+.topProducts {
+  padding: 2rem;
+  align-content: center;
+
+  @media (max-width: 1024px) {
+    padding: 1.5rem; 
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem; 
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem; 
+  }
+}
+
+.topCatalogues{
+  padding: 2rem;
+  align-content: center;
+  
+}
+.categories{
+  padding: 2rem;
+  align-content: center;
+
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px;
+  margin: 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+
+  @media (max-width: 480px) {
+    grid-gap: 10px; 
+    margin: 10px;   
+  }
+}
+
+
+.aboutUs {
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .companyInfo {
+    margin-top: 2rem;
+    padding: 0 2rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+
+
