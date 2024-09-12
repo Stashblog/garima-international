@@ -1,25 +1,37 @@
 .masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dynamically adjusts the number of columns */
-    grid-gap: 15px; /* Space between grid items */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Default: Dynamic grid */
+  grid-gap: 15px; /* Space between grid items */
+}
+
+.masonryItem {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.masonryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.masonryItem:hover .masonryImage {
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .masonry {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet size and below */
   }
-  
-  .masonryItem {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile view */
   }
-  
-  .masonryImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .masonryItem:hover .masonryImage {
-    transform: scale(1.05); 
-  }
-  
+}
