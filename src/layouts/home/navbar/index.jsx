@@ -28,10 +28,11 @@ export default function Main({ fullscreen, setFullscreen }) {
       <nav className={isScrolled ? s.nav + ' ' + s.scrolled : s.nav}>
         <div className={s.left}>
           <Link to='/home'>
-            <img src={images.Profile} alt='' />
+            <div className={s.img}>
+              <img src={images.Profile} alt='' />
+            </div>
+            <span>Garima International</span>
           </Link>
-          
-          <span><h3>  Garima International</h3></span>
         </div>
 
         <div className={s.right}>

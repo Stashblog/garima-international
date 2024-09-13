@@ -4,7 +4,7 @@ import s from './styles.module.scss'
 const AboutUs = () => {
   return (
     
-    <div className={s.aboutUsContainer}>
+    <div className={s.aboutUsContainer + " indent"}>
     
       <div className={s.banner}>
         <div className={s.bannerContent}>

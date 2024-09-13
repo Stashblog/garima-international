@@ -29,7 +29,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className={s.faqs}>
+    <div className={s.faqs + ' indent'}>
       <div className={s.title}>Frequently Asked Questions</div>
       <div className={s.faqList}>
         {faqs.map((faq, index) => (

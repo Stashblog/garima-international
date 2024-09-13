@@ -1,6 +1,6 @@
-// ContactUs.jsx
+
 import  { useState } from 'react';
-import s from './styles.module.scss'; // Import the SCSS module
+import s from './styles.module.scss';
 import images from 'images'
 const ContactUs = () => {
  
@@ -25,7 +25,6 @@ const ContactUs = () => {
         e.preventDefault();
         setFormStatus('Submitting...');
     
-        // Simulate form submission
         setTimeout(() => {
           setFormStatus('Your message has been sent successfully!');
           setFormData({
@@ -37,7 +36,7 @@ const ContactUs = () => {
       };
     
       return (
-        <div className={s.contactUs}>
+        <div className={s.contactUs + " indent"}>
           <h1>Contact Us</h1>
           <blockquote className={s.quote}>
         We are here to help you turn your ideas into reality. Reach out to us and let us create something amazing together.

@@ -7,24 +7,12 @@
     font-size: 3rem;
     margin-bottom: 2rem;
     color: #333;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 2rem;
-    }
   }
 
   .productGrid {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-      justify-content: center;
-    }
   }
 
   .productCard {
@@ -56,28 +44,12 @@
       h2 {
         font-size: 1.5rem;
         color: #333;
-
-        @media (max-width: 768px) {
-          font-size: 1.2rem;
-        }
-
-        @media (max-width: 480px) {
-          font-size: 1rem;
-        }
       }
 
       p {
         font-size: 1rem;
         color: #777;
         margin-top: 0.5rem;
-
-        @media (max-width: 768px) {
-          font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-          font-size: 0.8rem;
-        }
       }
     }
 
@@ -106,36 +78,79 @@
         &:hover {
           background-color: #a77c2d;
         }
-
-        @media (max-width: 768px) {
-          padding: 0.7rem 1.3rem;
-          font-size: 0.9rem;
-        }
-
-        @media (max-width: 480px) {
-          padding: 0.6rem 1rem;
-          font-size: 0.8rem;
-        }
       }
     }
 
     &:hover .overlay {
       opacity: 1;
     }
+  }
+}
 
-    @media (max-width: 1024px) {
-      width: 250px;
-      height: 350px;
-    }
+/* Consolidated media queries */
+@media (max-width: 1279px) {
+  .productCard {
+    width: 250px;
+    height: 350px;
+  }
+}
 
-    @media (max-width: 768px) {
-      width: 200px;
-      height: 300px;
-    }
+@media (max-width: 768px) {
+  .productPage {
+    padding: 1.5rem;
+  }
 
-    @media (max-width: 480px) {
-      width: 180px;
-      height: 280px;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .productGrid {
+    justify-content: center;
+  }
+
+  .productCard {
+    width: 200px;
+    height: 300px;
+  }
+
+  .productInfo h2 {
+    font-size: 1.2rem;
+  }
+
+  .productInfo p {
+    font-size: 0.9rem;
+  }
+
+  .queryButton {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productPage {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .productCard {
+    width: 180px;
+    height: 280px;
+  }
+
+  .productInfo h2 {
+    font-size: 1rem;
+  }
+
+  .productInfo p {
+    font-size: 0.8rem;
+  }
+
+  .queryButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 }

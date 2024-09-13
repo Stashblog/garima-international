@@ -75,7 +75,7 @@ const Product= () => {
   ];
 
   return (
-    <div className={s.productPage}>
+    <div className={s.productPage + " indent"}>
       <h1>Our Products</h1>
       <div className={s.productGrid}>
         {products.map((product) => (

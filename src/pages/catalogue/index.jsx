@@ -43,7 +43,7 @@ const Catalogue = () => {
   ];
 
   return (
-    <div className={s.cataloguePage}>
+    <div className={s.cataloguePage + " indent"}>
       <div className={s.content}>
         <h1>Catalogues</h1>
         <p>
