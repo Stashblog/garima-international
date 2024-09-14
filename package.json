@@ -13,7 +13,6 @@
     "pretty": "prettier --config .prettierrc --write .",
     "preview": "vite preview"
 
-
   },
   "dependencies": {
     "axios": "^1.2.0",

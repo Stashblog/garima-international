@@ -56,7 +56,7 @@ export default function Main({ fullscreen, setFullscreen }) {
   )
 }
 
-const NavLinks = onClickHandler => (
+const NavLinks = props => (
   <div className={s.navLinks}>
     {navLinks.map(({ name, path }, i) => (
       <Link
@@ -64,7 +64,7 @@ const NavLinks = onClickHandler => (
         to={path}
         className={window.location.hash.substring(1).startsWith(path) ? s.active : ''}
         target={path === '/signIn' ? '_blank' : ''}
-        onClick={onClickHandler}
+        onClick ={props.onClickHandler}
       >
         <div>{name}</div>
       </Link>

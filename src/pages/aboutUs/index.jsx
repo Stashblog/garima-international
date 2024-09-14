@@ -17,6 +17,7 @@ const AboutUs = () => {
     
       <section className={s.aboutContent}>
         <div className={s.contentWrapper}>
+          
           <h2>Our Mission</h2>
           <p>
             Our mission is to provide top-notch solutions that meet the needs of

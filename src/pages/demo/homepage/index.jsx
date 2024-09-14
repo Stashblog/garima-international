@@ -2,7 +2,7 @@ import { Card } from 'components'
 import s from './styles.module.scss'
 
 
-const Homepage = () => {
+export default function Main() {
   return (
     <>
     <div className={s.main}>
@@ -23,4 +23,3 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
