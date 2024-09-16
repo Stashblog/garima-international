@@ -64,7 +64,7 @@ const NavLinks = props => (
         to={path}
         className={window.location.hash.substring(1).startsWith(path) ? s.active : ''}
         target={path === '/signIn' ? '_blank' : ''}
-        onClick ={props.onClickHandler}
+        onClick={props.onClickHandler}
       >
         <div>{name}</div>
       </Link>

@@ -1,42 +1,61 @@
-
-import s from './styles.module.scss'; // Import SCSS module
-import { FaLinkedin, FaInstagram, FaFacebookF, FaEnvelope } from 'react-icons/fa'; // Icons
+import s from './styles.module.scss'
 
 const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className={s.container}>
         <div className={s.row}>
-          {/* Left Column - Company Info */}
           <div className={s.col}>
             <h3 className={s.companyName}>Garima International.</h3>
-            <p>Garima international, peetal nagri,<br />
-              Moradabad, Uttar Pradesh, India</p>
+            <p>
+              Garima international, peetal nagri,
+              <br />
+              Moradabad, Uttar Pradesh, India
+            </p>
           </div>
 
-          {/* Middle Column - Links */}
           <div className={s.col}>
             <h4>Links</h4>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">Support</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Contact</a></li>
+              <li>
+                <a href='/'>Home</a>
+              </li>
+              <li>
+                <a href='/'>Support</a>
+              </li>
+              <li>
+                <a href='/'>About</a>
+              </li>
+              <li>
+                <a href='/'>Contact</a>
+              </li>
             </ul>
           </div>
 
-          {/* Right Column - Company & Social Links */}
           <div className={s.col}>
             <h4>Company</h4>
             <ul>
-              <li><a href="/">Terms & Conditions</a></li>
-              <li><a href="/">Privacy Policies</a></li>
-              <li className={s.email}><FaEnvelope /> admin@garimainternational.com</li>
-              
+              <li>
+                <a href='/'>Terms & Conditions</a>
+              </li>
+              <li>
+                <a href='/'>Privacy Policies</a>
+              </li>
+              <li className={s.email}>
+                <span className='material-icons'>email</span>
+                admin@garimainternational.com
+              </li>
+
               <li className={s.socialIcons}>
-                <a href="/"><FaLinkedin /></a>
-                <a href="/"><FaInstagram /></a>
-                <a href="/"><FaFacebookF /></a>
+                <a href='/'>
+                  <span className='material-icons'>public</span>
+                </a>
+                <a href='/'>
+                  <span className='material-icons'>call</span>
+                </a>
+                <a href='/'>
+                  <span className='material-icons'>facebook</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -46,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

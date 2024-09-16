@@ -57,7 +57,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    
 
     .img {
       display: flex;
@@ -71,7 +70,7 @@
         object-fit: contain;
       }
     }
-    &>span{
+    & > span {
       font-size: 1rem;
       font-weight: 600;
       color: var(--c-black);
