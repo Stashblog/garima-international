@@ -201,6 +201,11 @@
         // height: 4rem;
         width: 3rem;
       }
+      .span {
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
     }
 
     .searchField {
