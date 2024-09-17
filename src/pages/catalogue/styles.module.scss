@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  background-color:var(--c-light);
+  background-color: var(--c-light);
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -89,60 +89,29 @@
 
   @media (max-width: 1279px) {
     flex-direction: column;
+    padding: 1rem;
 
     .carousel {
       padding-left: 0;
-    }
-
-    .content {
-      padding-right: 0;
-      margin-bottom: 2rem;
-
-      h1 {
-        font-size: 2.5rem;
-        text-align: center;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-
-    .content {
-      h1 {
-        font-size: 2rem;
-        text-align: center;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-
-    .carousel {
       flex-direction: column;
       align-items: center;
 
       .carouselItem {
         width: 90%;
+        min-width: unset;
         margin: 1rem 0;
       }
     }
-  }
 
-  @media (max-width: 480px) {
     .content {
+      padding-right: 0;
+      margin-bottom: 2rem;
       h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         text-align: center;
       }
-
       p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
       }
 
       .exploreButton {
@@ -151,11 +120,28 @@
       }
     }
 
-    .carousel {
-      .carouselItem {
+    @media (max-width: 768px) {
+      .content {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      .carousel .carouselItem {
         width: 100%;
-        min-width: unset;
-        margin: 1rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
       }
     }
   }

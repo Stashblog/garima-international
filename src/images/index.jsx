@@ -37,7 +37,7 @@ import pro6 from './placeholders/pro6.jpg'
 import pro7 from './placeholders/pro7.jpg'
 import pro8 from './placeholders/pro8.jpg'
 import pro9 from './placeholders/pro9.jpg'
-
+import gilogo from './placeholders/gilogo.png'
 
 const main = {
   facebook,
@@ -49,35 +49,35 @@ const main = {
   noImage,
   Profile,
   Home,
- TopPro,
- Cat,
- Cat2,
- Cat3,
- Type,
- Type1,
- Type2,
- Type3,
- Type4,
- Type5,
- Type6,
- Type7,
- Type8,
- Type9,
- Type10,
- banner1,
- banner2,
- banner3,
- illus,
- pro1,
- pro2,
- pro3,
- pro4,
- pro5,
- pro6,
- pro7,
- pro8,
- pro9
-
+  TopPro,
+  Cat,
+  Cat2,
+  Cat3,
+  Type,
+  Type1,
+  Type2,
+  Type3,
+  Type4,
+  Type5,
+  Type6,
+  Type7,
+  Type8,
+  Type9,
+  Type10,
+  banner1,
+  banner2,
+  banner3,
+  illus,
+  pro1,
+  pro2,
+  pro3,
+  pro4,
+  pro5,
+  pro6,
+  pro7,
+  pro8,
+  pro9,
+  gilogo
 }
 
 export default main

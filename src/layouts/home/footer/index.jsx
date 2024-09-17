@@ -1,6 +1,6 @@
 import s from './styles.module.scss'
 
-const Footer = () => {
+export default function Main() {
   return (
     <footer className={s.footer}>
       <div className={s.container}>
@@ -48,13 +48,16 @@ const Footer = () => {
 
               <li className={s.socialIcons}>
                 <a href='/'>
-                  <span className='material-icons'>public</span>
+                  <i className='fa-brands fa-whatsapp'></i>
                 </a>
                 <a href='/'>
-                  <span className='material-icons'>call</span>
+                  <i className='fa-brands fa-instagram'></i>
                 </a>
                 <a href='/'>
-                  <span className='material-icons'>facebook</span>
+                  <i className='fa-brands fa-linkedin'></i>
+                </a>
+                <a href='/'>
+                  <i className='fa-brands fa-facebook'></i>
                 </a>
               </li>
             </ul>
@@ -67,5 +70,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer
