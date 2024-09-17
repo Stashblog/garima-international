@@ -64,7 +64,7 @@ export default function Main() {
           </div>
         </div>
         <div className={s.footerBottom}>
-          <p>2023. All rights reserved</p>
+          <p>2024. All rights reserved</p>
         </div>
       </div>
     </footer>

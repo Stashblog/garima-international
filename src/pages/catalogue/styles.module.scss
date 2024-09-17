@@ -119,30 +119,5 @@
         font-size: 0.9rem;
       }
     }
-
-    @media (max-width: 768px) {
-      .content {
-        h1 {
-          font-size: 2rem;
-        }
-        p {
-          font-size: 1rem;
-        }
-      }
-      .carousel .carouselItem {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .content {
-        h1 {
-          font-size: 1.8rem;
-        }
-        p {
-          font-size: 0.9rem;
-        }
-      }
-    }
   }
 }
