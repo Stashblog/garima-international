@@ -7,3 +7,4 @@ export { default as Categories } from './categories'
 
 export { default as Corousel } from './corousel'
 export { default as FAQs } from './faqs'
+export { default as ImageGrid } from './imageGrid'

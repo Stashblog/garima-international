@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
+import { ImageGrid } from 'components'
 // Assuming the component is receiving `product` prop
 const ProductDescription = ({ product }) => {
   const { id } = useParams() // Get the product id from the route
@@ -164,7 +165,12 @@ const ProductDescription = ({ product }) => {
       <div className={s.productDetails}>
         {/* Left column: Product Image */}
         <div className={s.imageSection}>
-          <img src={currentProduct.imageUrl} alt={currentProduct.title} />
+          <ImageGrid
+            images={[
+              { url: currentProduct.imageUrl, alt: currentProduct.title },
+              ...currentProduct.additionalImages.map(img => ({ url: img, alt: 'Additional Image' }))
+            ]}
+          />
         </div>
 
         {/* Right column: Product Information */}
@@ -208,7 +214,7 @@ const ProductDescription = ({ product }) => {
         </div>
 
         <div className={s.section}>
-          <h2>More Pictures</h2>
+          <h2>Related Products</h2>
           <div className={s.imageGallery}>
             {currentProduct.additionalImages.map((image, index) => (
               <img key={index} src={image} alt={`Additional ${index}`} />
