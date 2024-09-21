@@ -1,74 +1,66 @@
-import { Link } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
-import { Products } from 'components'
+import { Link } from 'react-router-dom'
 
 export default function Main() {
   const products = [
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro1,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '-50%'
+      id: 1,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type
     },
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro2,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '-50%'
+      id: 2,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type1
     },
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro3,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '-50%'
+      id: 3,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type2
     },
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro4,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '50%'
+      id: 4,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type3
     },
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro5,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '50%'
+      id: 5,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type4
     },
     {
-      title: 'Antiques',
-      subtitle: 'Brass Surahi',
-      imageSrc: images.pro6,
-      priceCurrent: 'Rp 30,000',
-      priceOld: 'Rp 60,000',
-      discount: '50%'
+      id: 6,
+      title: 'Showpiece',
+      description: 'showpiece item for table and glass cases ',
+      imageUrl: images.Type5
     }
   ]
+
   return (
-    <>
-      <div className={s.topProducts + ' indent'}>
-        <div className={s.title}>Top Products</div>
-        <div className={s.products}>
-          <div className={s.cardGrid}>
-            {products.map(product => (
-              <Products
-                {...product}
-                key={product.id} // Use product.id as the key
-              />
-            ))}
+    <div className={s.productPage + ' indent'}>
+      <h1>Top Products</h1>
+      <div className={s.productGrid}>
+        {products.map(product => (
+          <div key={product.id} className={s.productCard}>
+            <img src={product.imageUrl} alt={product.title} />
+            <div className={s.productInfo}>
+              <h2>{product.title}</h2>
+              {/* <p>{product.description}</p> */}
+            </div>
+            <div className={s.overlay}>
+              <Link to={`/product/${product.id}`}>
+                <button className={s.queryButton}>View Product</button>
+              </Link>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   )
 }
