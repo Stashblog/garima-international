@@ -1,5 +1,4 @@
-
-import s from './styles.module.scss'; // Import SCSS module
+import s from './styles.module.scss' // Import SCSS module
 
 const Products = ({ title, description, imageSrc }) => {
   return (
@@ -10,10 +9,10 @@ const Products = ({ title, description, imageSrc }) => {
         <p>{description}</p>
       </div>
       <div className={s.overlay}>
-        <button className={s.queryButton}>Send Query</button>
+        <button className={s.queryButton}>View Product</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

@@ -1,5 +1,6 @@
 import s from './styles.module.scss'
 import images from 'images'
+import { Link } from 'react-router-dom'
 
 const Product = () => {
   const products = [
@@ -83,7 +84,9 @@ const Product = () => {
               <p>{product.description}</p>
             </div>
             <div className={s.overlay}>
-              <button className={s.queryButton}>Send Query</button>
+              <Link to={`/product/${product.id}`}>
+                <button className={s.queryButton}>View Product</button>
+              </Link>
             </div>
           </div>
         ))}

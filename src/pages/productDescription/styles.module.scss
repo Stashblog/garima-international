@@ -1,0 +1,209 @@
+.productPage {
+  padding: 3rem 2rem;
+  background-color: #f4f4f9;
+  color: #333;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.productDetails {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.imageSection {
+  flex: 1;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      max-height: 250px;
+      object-fit: cover;
+    }
+  }
+}
+.metaSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; // Default alignment for desktop
+  text-align: left; // Default text alignment for desktop
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    margin-bottom: 1rem;
+
+    .tag {
+      background-color: #f0f0f0;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .productMeta {
+    margin-bottom: 1.5rem;
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+
+      strong {
+        color: #333;
+      }
+    }
+  }
+
+  .queryButton {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: auto;
+    max-width: 200px;
+    text-align: center;
+
+    &:hover {
+      background-color: #c7983c;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .metaSection {
+    align-items: center; // Center items horizontally in mobile view
+    text-align: center; // Center text in mobile view
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem; // Reduced margin for mobile
+    }
+
+    .tags .tag {
+      font-size: 0.8rem;
+      margin-right: 0.3rem; // Adjust margin for mobile
+    }
+
+    .description {
+      font-size: 1rem;
+      margin-bottom: 1rem; // Reduced margin for mobile
+    }
+
+    .productMeta p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem; // Adjust margin for mobile
+    }
+
+    .queryButton {
+      padding: 0.4rem 0.8rem; // Adjust padding for smaller screens
+      font-size: 1rem;
+      max-width: 150px; // Optional: adjust max-width for mobile
+    }
+  }
+}
+
+.additionalSections {
+  .section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #333;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+        align-items: center; // Center items horizontally in mobile view
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        align-items: center; // Center items horizontally in mobile view
+        text-align: center;
+      }
+    }
+  }
+
+  .imageGallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

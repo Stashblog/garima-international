@@ -38,6 +38,9 @@ import pro7 from './placeholders/pro7.jpg'
 import pro8 from './placeholders/pro8.jpg'
 import pro9 from './placeholders/pro9.jpg'
 import gilogo from './placeholders/gilogo.png'
+import Typeimg1 from './placeholders/Typeimg1.jpg'
+import Typeimg2 from './placeholders/Typeimg2.jpg'
+import Typeimg3 from './placeholders/Typeimg3.jpg'
 
 const main = {
   facebook,
@@ -77,7 +80,10 @@ const main = {
   pro7,
   pro8,
   pro9,
-  gilogo
+  gilogo,
+  Typeimg1,
+  Typeimg2,
+  Typeimg3
 }
 
 export default main
