@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
 import { ImageGrid } from 'components'
+import { SendQueryForm } from 'components'
+
 // Assuming the component is receiving `product` prop
 const ProductDescription = ({ product }) => {
   const { id } = useParams() // Get the product id from the route
-
+  const [isModalVisible, setModalVisible] = useState(false)
   // Mock data (Replace this with actual data fetching logic if needed)
   const mockProducts = [
     {
@@ -196,10 +199,12 @@ const ProductDescription = ({ product }) => {
               <strong>Product listed on:</strong> {currentProduct.listedOn}
             </p>
           </div>
-
-          <button className={s.queryButton}>Send Query</button>
+          <button className={s.queryButton} onClick={() => setModalVisible(true)}>
+            Send Query
+          </button>
         </div>
       </div>
+      <SendQueryForm isVisible={isModalVisible} onClose={() => setModalVisible(false)} />
 
       {/* Bottom Section */}
       <div className={s.additionalSections}>
@@ -209,7 +214,7 @@ const ProductDescription = ({ product }) => {
         </div>
 
         <div className={s.section}>
-          <h2>Additional Information</h2>
+          <h2>Product Specifications</h2>
           <p>{currentProduct.additionalInfo}</p>
         </div>
 
