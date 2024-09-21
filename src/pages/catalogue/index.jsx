@@ -1,7 +1,11 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
 
 const Catalogue = () => {
+  const navigate = useNavigate()
+
   const catalogItems = [
     {
       id: 1,
@@ -41,6 +45,10 @@ const Catalogue = () => {
     }
   ]
 
+  const handleViewCatalogue = id => {
+    navigate(`/catalogue/${id}`) // Navigate to Catalogue Description with the catalogue ID
+  }
+
   return (
     <div className={s.cataloguePage + ' indent'}>
       <div className={s.content}>
@@ -56,6 +64,11 @@ const Catalogue = () => {
             <div className={s.carouselText}>
               <span>{`0${item.id} — ${item.roomType}`}</span>
               <h2>{item.title}</h2>
+            </div>
+            <div className={s.overlay}>
+              <button className={s.queryButton} onClick={() => handleViewCatalogue(item.id)}>
+                View Catalogue
+              </button>
             </div>
           </div>
         ))}

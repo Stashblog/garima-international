@@ -4,14 +4,14 @@
   text-align: center;
 
   h1 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
   }
 
   .productGrid {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -24,7 +24,7 @@
     margin-bottom: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 0px; 
+    border-radius: 0px;
     transition: transform 0.3s ease;
     cursor: pointer;
 
@@ -39,7 +39,7 @@
     }
 
     .productInfo {
-      padding: 1rem; 
+      padding: 1rem;
       text-align: center;
 
       h2 {
