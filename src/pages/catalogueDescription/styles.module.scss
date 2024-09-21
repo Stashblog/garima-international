@@ -1,70 +1,229 @@
-.catalogueDescriptionPage {
+.catalogueDescription {
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 
-  .title {
-    font-size: 32px;
-    font-weight: bold;
+  h1 {
+    font-size: 2em;
     margin-bottom: 10px;
-    text-align: center;
   }
 
-  .description {
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-align: center;
+  p {
+    font-size: 1.2em;
     color: #555;
   }
 
   .carousel {
-    margin-bottom: 40px;
+    display: flex;
+    overflow-x: auto; // Allows horizontal scrolling
+    margin-bottom: 20px;
 
     .carouselImage {
-      width: 100%;
-      height: 400px;
+      width: 600px; // Adjust as necessary
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+
+  .selectButton {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: #444;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 6rem;
+    max-width: 200px;
+    text-align: center;
+
+    &:hover {
+      background-color: #c7983c;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+  }
+
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; // Add some space between the cards
+  }
+
+  .productCard {
+    perspective: 1000px; // Allows for 3D perspective on hover
+    width: 150px; // Set a fixed width for uniformity
+    height: 200px; // Set a fixed height for uniformity
+    position: relative; // Make positioning relative for absolute elements
+
+    &.staticCard {
+      cursor: default; // Disable cursor change on hover
+      .cardInner {
+        transform: none; // Prevent flipping
+      }
+    }
+  }
+
+  .cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease; // Add 'ease' for smoother transition
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+    &:hover {
+      // Only apply flip effect if not in selecting mode
+      transform: rotateY(180deg);
+    }
+  }
+
+  .cardFront,
+  .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; // Center content in the cards
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardFront {
+    img {
+      max-width: 100%;
+      max-height: 100%;
+
       object-fit: cover;
     }
   }
 
-  .productsContainer {
+  .cardBack {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: #fff; // Background color for the back of the card
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 10px;
 
-    .productCard {
-      width: 250px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .viewProductButton {
+      padding: 5px 10px;
+      background-color: #c7983c; // Button color
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
 
       &:hover {
-        transform: scale(1.05);
-      }
-
-      .productImage {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .productInfo {
-        padding: 15px;
-        text-align: center;
-
-        h3 {
-          font-size: 20px;
-          margin-bottom: 10px;
-        }
-
-        p {
-          font-size: 16px;
-          color: #888;
-        }
+        background-color: #c7983c; // Darker shade on hover
       }
     }
+  }
+
+  .checkbox {
+    position: absolute;
+    top: 10px; // Adjust as needed
+    right: 10px; // Adjust as needed
+    cursor: pointer; // Change cursor for checkbox
+  }
+
+  // Media Queries for Responsive Design
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    h1,
+    p,
+    h2 {
+      text-align: center; // Center align for mobile view
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    .productCard {
+      width: 120px; // Smaller width for mobile
+      height: 180px; // Adjusted height for mobile
+
+      h3 {
+        font-size: 1em; // Smaller font size for product names
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1,
+    p,
+    h2 {
+      text-align: center; // Center align for very small screens
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    .productCard {
+      width: 100px; // Even smaller width for very small screens
+      height: 160px; // Adjusted height for very small screens
+
+      h3 {
+        font-size: 0.9em; // Adjust font size for product names
+      }
+    }
+  }
+}
+.queryButton {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: #444;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 6rem;
+  max-width: 200px;
+  text-align: center;
+
+  &:hover {
+    background-color: #c7983c;
+    color: rgb(255, 255, 255);
+    border: none;
   }
 }
