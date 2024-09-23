@@ -33,7 +33,7 @@ const NewArrivals = () => {
   return (
     <section className={s.newArrivalsSection}>
       <h2 className={s.title}>New Arrivals</h2>
-      <div className={s.newArrivalsGrid}>
+      <div className={s.newArrivalsGrid + ' indent'}>
         {newProducts.map(product => (
           <div key={product.id} className={s.productCard}>
             <div className={s.imageWrapper}>
