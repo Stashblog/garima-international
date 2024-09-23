@@ -6,6 +6,7 @@ import TopProducts from './topProducts'
 import TopCatalogues from './topCatalogues'
 import Category from './category'
 import { FAQs } from 'components'
+import NewArrivals from './newArrivals'
 
 export default function Main() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Main() {
       </div>
       <TopProducts />
       <TopCatalogues />
+      <NewArrivals />
       <Category />
       <FAQs />
     </>
