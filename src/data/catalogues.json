@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "imageSrc": "Cat",
+    "roomType": "Living Room",
+    "title": "Home Decor",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  },
+  {
+    "id": 2,
+    "imageSrc": "Cat2",
+    "roomType": "Pooja Room",
+    "title": "Showpiece Pairs",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  },
+  {
+    "id": 3,
+    "imageSrc": "Cat3",
+    "roomType": "Study Room",
+    "title": "Antiques",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  },
+  {
+    "id": 4,
+    "imageSrc": "Cat",
+    "roomType": "Living Room",
+    "title": "Home Decor",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  },
+  {
+    "id": 5,
+    "imageSrc": "Cat2",
+    "roomType": "Pooja Room",
+    "title": "Showpiece Pairs",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  },
+  {
+    "id": 6,
+    "imageSrc": "Cat3",
+    "roomType": "Study Room",
+    "title": "Antiques",
+    "description": "Beautiful collection of home decor items to spruce up your living space.",
+    "products": [5, 6, 7, 8, 9, 10, 11],
+    "images": ["Cat", "Cat2", "Cat3", "Type"]
+  }
+]

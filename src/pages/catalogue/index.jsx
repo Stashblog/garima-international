@@ -1,49 +1,10 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
+import { catalogues } from 'data'
 
 const Catalogue = () => {
   const navigate = useNavigate()
-
-  const catalogItems = [
-    {
-      id: 1,
-      title: 'Home Decor',
-      roomType: 'Living Room',
-      imageUrl: images.Cat
-    },
-    {
-      id: 2,
-      title: 'Antiques',
-      roomType: 'Pooja Room',
-      imageUrl: images.Cat2
-    },
-    {
-      id: 3,
-      title: 'New Arrivals',
-      roomType: 'Study Room',
-      imageUrl: images.Cat3
-    },
-    {
-      id: 4,
-      title: 'Home Decor',
-      roomType: 'Living Room',
-      imageUrl: images.Cat
-    },
-    {
-      id: 5,
-      title: 'Antiques',
-      roomType: 'Pooja Room',
-      imageUrl: images.Cat2
-    },
-    {
-      id: 6,
-      title: 'New Arrivals',
-      roomType: 'Study Room',
-      imageUrl: images.Cat3
-    }
-  ]
 
   const handleViewCatalogue = id => {
     navigate(`/catalogue/${id}`) // Navigate to Catalogue Description with the catalogue ID
@@ -58,9 +19,9 @@ const Catalogue = () => {
       </div>
 
       <div className={s.carousel}>
-        {catalogItems.map(item => (
+        {catalogues.map(item => (
           <div key={item.id} className={s.carouselItem}>
-            <img src={item.imageUrl} alt={item.title} />
+            <img src={images[item.imageSrc]} alt={item.title} />
             <div className={s.carouselText}>
               <span>{`0${item.id} — ${item.roomType}`}</span>
               <h2>{item.title}</h2>

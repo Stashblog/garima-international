@@ -1,12 +1,24 @@
+import { categories } from 'data'
 import s from './styles.module.scss'
-const Categories = ({ images }) => {
+import images from 'images'
+import { useNavigate } from 'react-router-dom'
+
+const Categories = () => {
+  const navigate = useNavigate()
+
+  const handleCategoryClick = category => {
+    navigate(`/category/${category}`)
+  }
   return (
     <div className={s.masonry}>
-      {images.map((image, index) => (
-        <div className={s.masonryItem} key={index} onClick={image.onClick}>
-          {' '}
-          {}
-          <img src={image.src} alt={image.alt} className={s.masonryImage} />
+      {categories.map((image, index) => (
+        <div
+          className={s.masonryItem}
+          key={index}
+          title={image.category}
+          onClick={() => handleCategoryClick(image.category)}
+        >
+          <img src={images[image.src]} alt={image.alt} className={s.masonryImage} />
         </div>
       ))}
     </div>

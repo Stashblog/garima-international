@@ -23,7 +23,8 @@ export default defineConfig(({ command, mode }) => {
         helpers: path.resolve(__dirname, 'src/helpers'),
         images: path.resolve(__dirname, 'src/images'),
         layouts: path.resolve(__dirname, 'src/layouts'),
-        components: path.resolve(__dirname, 'src/components')
+        components: path.resolve(__dirname, 'src/components'),
+        data: path.resolve(__dirname, 'src/data')
       }
     },
     base: '/garima-international/',

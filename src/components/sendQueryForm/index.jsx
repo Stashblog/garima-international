@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import s from './styles.module.scss'
 
 const SendQueryForm = ({ isVisible, onClose }) => {
