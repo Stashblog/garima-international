@@ -164,7 +164,7 @@ const ProductDescription = ({ product }) => {
   const currentProduct = product || mockProducts.find(p => p.id === parseInt(id)) || mockProducts[0] // Use passed product prop or fallback to mockProducts
 
   return (
-    <div className={s.productPage}>
+    <div className={s.productPage + ' indent'}>
       <div className={s.productDetails}>
         {/* Left column: Product Image */}
         <div className={s.imageSection}>

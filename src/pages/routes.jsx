@@ -5,6 +5,7 @@ import AboutUs from './aboutUs'
 import ContactUs from './contactUs'
 import ProductDescription from './productDescription'
 import CatalogueDescription from './catalogueDescription'
+import CategoryPage from './categoryPage'
 import * as Layouts from 'layouts'
 
 const routes = [
@@ -39,14 +40,20 @@ const routes = [
     auth: false
   },
   {
-    path: '/product/:id', // Use :id to make the route dynamic for product ID
+    path: '/product/:id',
     Component: ProductDescription,
     Super: Layouts.Home,
     auth: false
   },
   {
-    path: '/catalogue/:id', // Use :id to make the route dynamic for product ID
+    path: '/catalogue/:id',
     Component: CatalogueDescription,
+    Super: Layouts.Home,
+    auth: false
+  },
+  {
+    path: '/category/:category',
+    Component: CategoryPage,
     Super: Layouts.Home,
     auth: false
   }

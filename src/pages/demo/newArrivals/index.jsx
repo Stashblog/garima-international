@@ -28,7 +28,6 @@ const newProducts = [
     imageUrl: images.Type3
   }
 ]
-
 const NewArrivals = () => {
   return (
     <section className={s.newArrivalsSection}>
@@ -49,5 +48,4 @@ const NewArrivals = () => {
     </section>
   )
 }
-
 export default NewArrivals

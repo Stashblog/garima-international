@@ -128,7 +128,7 @@ const CatalogueDescription = () => {
   }
 
   return (
-    <div className={s.catalogueDescription}>
+    <div className={s.catalogueDescription + ' indent'}>
       {catalogueItem ? (
         <>
           <h1>{catalogueItem.title}</h1>
