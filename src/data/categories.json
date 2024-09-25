@@ -1,57 +1,22 @@
 [
   {
-    "src": "Type",
+    "src": "u1",
     "alt": "",
-    "category": "category1"
+    "category": "Urn"
   },
   {
-    "src": "Type1",
+    "src": "g10",
     "alt": "",
-    "category": "category2"
+    "category": "Basket"
   },
   {
-    "src": "Type2",
+    "src": "j1",
     "alt": "",
-    "category": "category3"
+    "category": "Laundary Basket"
   },
   {
-    "src": "Type3",
+    "src": "s1",
     "alt": "",
-    "category": "category4"
-  },
-  {
-    "src": "Type4",
-    "alt": "",
-    "category": "category5"
-  },
-  {
-    "src": "Type5",
-    "alt": "",
-    "category": "category6"
-  },
-  {
-    "src": "Type6",
-    "alt": "",
-    "category": "category7"
-  },
-  {
-    "src": "Type7",
-    "alt": "",
-    "category": "category8"
-  },
-  {
-    "src": "Type8",
-    "alt": "",
-    "category": "category9"
-  },
-  {
-    "src": "Type9",
-    "alt": "",
-    "category": "category10"
-  },
-  {
-    "src": "Type10",
-    "alt": "",
-    "category": "category11"
+    "category": "Stool"
   }
 ]

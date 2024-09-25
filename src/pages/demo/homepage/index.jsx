@@ -1,9 +1,8 @@
 import { Card } from 'components'
 import s from './styles.module.scss'
-
+import images from 'images'
 
 export default function Main() {
-
   //   useEffect(() => {
   //   if (images.length) {
   //     const swiper = new window.Swiper(`.swiper`, {
@@ -30,13 +29,14 @@ export default function Main() {
   //     }
   //   }
   // }, [images])
-  
+
   return (
     <>
-    <div className={s.main}>
-    <div className={s.dashboard}>
-      <div className={s.content + ' indent'}>
-{/* 
+      <div className={s.main}>
+        <div className={s.dashboard}>
+          <div className={s.content + ' indent'}>
+            <img src={images.home} />
+            {/* 
          <div className={'swiper topBanners ' + s.swiperContainer}>
             <div className='swiper-wrapper'>
               {images.map((img, i) => (
@@ -49,18 +49,17 @@ export default function Main() {
             <div className='swiper-button-prev'></div>
             <div className='swiper-pagination'></div>
           </div> */}
-        <div className="front">
-          <Card
-            title='Garima International'
-            text="Some quick example text to build on the card title and make up the bulk of the card's content."
-            buttonLabel='Buy Now'
-            buttonLink='/'
-          />
+            <div className='front'>
+              {/* <Card
+                title='Garima International'
+                text="Some quick example text to build on the card title and make up the bulk of the card's content."
+                buttonLabel='Buy Now'
+                buttonLink='/'
+              /> */}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  </>
+    </>
   )
 }
-

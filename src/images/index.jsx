@@ -1,89 +1,85 @@
-import facebook from './logo/facebook.svg'
-import instagram from './logo/instagram.svg'
-import whatsapp from './logo/whatsapp.svg'
-import facebookAlt from './logo/facebook.png'
-import instagramAlt from './logo/instagram.png'
-
-import quotes from './illus/quotes.svg'
-
 import noImage from './placeholders/noImage.png'
-import Profile from './placeholders/profile.png'
-import Home from './placeholders/home.png'
-import TopPro from './placeholders/topPro.jpg'
-import Cat from './placeholders/cat.png'
-import Cat2 from './placeholders/cat2.png'
-import Cat3 from './placeholders/cat3.png'
-import Type from './placeholders/type.jpg'
-import Type1 from './placeholders/type1.jpg'
-import Type2 from './placeholders/type2.jpg'
-import Type3 from './placeholders/type3.jpg'
-import Type4 from './placeholders/type4.jpg'
-import Type5 from './placeholders/type5.jpg'
-import Type6 from './placeholders/type6.jpg'
-import Type7 from './placeholders/type7.jpg'
-import Type8 from './placeholders/type8.jpg'
-import Type9 from './placeholders/type9.jpg'
-import Type10 from './placeholders/type10.jpg'
-import banner1 from './placeholders/banner1.png'
-import banner2 from './placeholders/banner2.png'
-import banner3 from './placeholders/banner3.png'
-import illus from './illus/illus.png'
-import pro1 from './placeholders/pro1.jpg'
-import pro2 from './placeholders/pro2.jpg'
-import pro3 from './placeholders/pro3.jpg'
-import pro4 from './placeholders/pro4.jpg'
-import pro5 from './placeholders/pro5.jpg'
-import pro6 from './placeholders/pro6.jpg'
-import pro7 from './placeholders/pro7.jpg'
-import pro8 from './placeholders/pro8.jpg'
-import pro9 from './placeholders/pro9.jpg'
-import gilogo from './placeholders/gilogo.png'
-import Typeimg1 from './placeholders/Typeimg1.jpg'
-import Typeimg2 from './placeholders/Typeimg2.jpg'
-import Typeimg3 from './placeholders/Typeimg3.jpg'
 
+import Home from './placeholders/home.jpg'
+
+import g1 from './placeholders/g1.jpg'
+import g2 from './placeholders/g2.jpg'
+import g3 from './placeholders/g3.jpg'
+import g4 from './placeholders/g4.jpg'
+import g5 from './placeholders/g5.jpg'
+import g6 from './placeholders/g6.jpg'
+import g7 from './placeholders/g7.jpg'
+import g8 from './placeholders/g8.jpg'
+import g9 from './placeholders/g9.jpg'
+import g10 from './placeholders/g10.jpg'
+import g11 from './placeholders/g11.jpg'
+
+import j1 from './placeholders/j1.jpg'
+import j2 from './placeholders/j2.jpg'
+import j3 from './placeholders/j3.jpg'
+import j4 from './placeholders/j4.jpg'
+import s1 from './placeholders/s1.jpg'
+import s3 from './placeholders/s3.jpg'
+import s4 from './placeholders/s5.jpg'
+import s5 from './placeholders/s1.jpg'
+import b1 from './placeholders/b1.jpg'
+import b2 from './placeholders/b2.jpg'
+import b3 from './placeholders/b3.jpg'
+import b4 from './placeholders/b4.jpg'
+import b5 from './placeholders/b5.jpg'
+import p1 from './placeholders/p1.jpg'
+import p2 from './placeholders/p2.jpg'
+import p3 from './placeholders/p3.jpg'
+import p4 from './placeholders/p4.jpg'
+import u1 from './placeholders/u1.jpg'
+import u2 from './placeholders/u2.jpg'
+import u3 from './placeholders/u3.jpg'
+import u4 from './placeholders/u4.jpg'
+import v1 from './placeholders/v1.jpg'
+import v2 from './placeholders/v2.jpg'
+import v3 from './placeholders/v3.jpg'
+import v4 from './placeholders/v4.jpg'
 const main = {
-  facebook,
-  instagram,
-  whatsapp,
-  facebookAlt,
-  instagramAlt,
-  quotes,
   noImage,
-  Profile,
   Home,
-  TopPro,
-  Cat,
-  Cat2,
-  Cat3,
-  Type,
-  Type1,
-  Type2,
-  Type3,
-  Type4,
-  Type5,
-  Type6,
-  Type7,
-  Type8,
-  Type9,
-  Type10,
-  banner1,
-  banner2,
-  banner3,
-  illus,
-  pro1,
-  pro2,
-  pro3,
-  pro4,
-  pro5,
-  pro6,
-  pro7,
-  pro8,
-  pro9,
-  gilogo,
-  Typeimg1,
-  Typeimg2,
-  Typeimg3
+
+  g1,
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+  g7,
+  g8,
+  g9,
+  g10,
+  g11,
+  j1,
+  j2,
+  j3,
+  j4,
+  s1,
+
+  s3,
+  s4,
+  s5,
+  b1,
+  b2,
+  b3,
+  b4,
+  b5,
+  p1,
+  p2,
+  p3,
+  p4,
+  u1,
+  u2,
+  u3,
+  u4,
+  v1,
+  v2,
+  v3,
+  v4
 }
 
 export default main
