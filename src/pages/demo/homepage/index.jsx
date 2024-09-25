@@ -35,7 +35,7 @@ export default function Main() {
       <div className={s.main}>
         <div className={s.dashboard}>
           <div className={s.content + ' indent'}>
-            <img src={images.home} />
+            <img src={images.Home} />
             {/* 
          <div className={'swiper topBanners ' + s.swiperContainer}>
             <div className='swiper-wrapper'>
