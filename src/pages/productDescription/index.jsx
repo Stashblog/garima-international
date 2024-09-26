@@ -5,6 +5,7 @@ import images from 'images'
 import { ImageGrid } from 'components'
 import { SendQueryForm } from 'components'
 import { products } from 'data'
+import { head } from 'helpers'
 
 const ProductDescription = ({ product }) => {
   const { id } = useParams()
@@ -14,6 +15,10 @@ const ProductDescription = ({ product }) => {
 
   const relatedProducts = products.filter(p => p.id !== currentProduct.id)
   useEffect(() => {}, [id])
+
+  useEffect(() => {
+    head({ title: currentProduct.title + ' | Global Crafts Innovation' })
+  }, [currentProduct])
 
   return (
     <div className={s.productPage + ' indent'}>
@@ -77,11 +82,11 @@ const ProductDescription = ({ product }) => {
                   alt={relatedProduct.title}
                   className={s.relatedProductImage}
                 />
-                {
-                  <div className={s.viewButton}>
-                    <Link to={`/product/${relatedProduct.id}`}>View </Link>
-                  </div>
-                }
+                <div className={s.viewButton}>
+                  <Link to={`/product/${relatedProduct.id}`} target='_blank'>
+                    View
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

@@ -26,7 +26,7 @@ export default function Main() {
       <TopCatalogues />
       <NewArrivals />
       <Category />
-      <FAQs />
+      {/* <FAQs /> */}
     </>
   )
 }

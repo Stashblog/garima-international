@@ -1,64 +1,68 @@
 import { Card } from 'components'
 import s from './styles.module.scss'
+import { useEffect } from 'react'
 import images from 'images'
 
-export default function Main() {
-  //   useEffect(() => {
-  //   if (images.length) {
-  //     const swiper = new window.Swiper(`.swiper`, {
-  //       slidesPerView: 1,
-  //       spaceBetween: 50,
-  //       loop: true,
-  //       autoplay: {
-  //         delay: 5000, // Adjust as needed
-  //         disableOnInteraction: false
-  //       },
-  //       pagination: {
-  //         el: '.swiper-pagination',
-  //         clickable: true,
-  //         dynamicBullets: true
-  //       },
-  //       navigation: {
-  //         nextEl: '.swiper-button-next',
-  //         prevEl: '.swiper-button-prev'
-  //       }
-  //     })
+// Array of banners for demonstration
+const banners = [
+  images.h1, // Replace with actual banner image paths
+  images.h2,
+  images.h3
+]
 
-  //     return () => {
-  //       swiper.destroy(true, true)
-  //     }
-  //   }
-  // }, [images])
+export default function Main() {
+  useEffect(() => {
+    // Check if banners is an array and has elements before initializing Swiper
+    if (Array.isArray(banners) && banners.length) {
+      const swiper = new window.Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        loop: true,
+        autoplay: {
+          delay: 5000, // Adjust autoplay delay as needed
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      })
+
+      return () => {
+        swiper.destroy(true, true) // Cleanup on unmount
+      }
+    }
+  }, [])
 
   return (
     <>
       <div className={s.main}>
-        <div className={s.dashboard}>
-          <div className={s.content + ' indent'}>
-            <img src={images.home} />
-            {/* 
-         <div className={'swiper topBanners ' + s.swiperContainer}>
+        {/* <div className={s.dashboard}> */}
+        <div className={s.content + ' indent'}>
+          <div className={'swiper topBanners ' + s.swiperContainer}>
             <div className='swiper-wrapper'>
-              {images.map((img, i) => (
-                <div className={s.slide + ' swiper-slide'} key={i}>
-                  <ImageTag src={img} alt='' />
-                </div>
-              ))}
+              {/* Ensure banners is an array and map over it */}
+              {Array.isArray(banners) && banners.length > 0 ? (
+                banners.map((banner, i) => (
+                  <div className={s.slide + ' swiper-slide'} key={i}>
+                    <img src={banner} alt={`banner-${i}`} />
+                  </div>
+                ))
+              ) : (
+                <p>No banners available</p>
+              )}
             </div>
             <div className='swiper-button-next'></div>
             <div className='swiper-button-prev'></div>
             <div className='swiper-pagination'></div>
-          </div> */}
-            <div className='front'>
-              {/* <Card
-                title='Garima International'
-                text="Some quick example text to build on the card title and make up the bulk of the card's content."
-                buttonLabel='Buy Now'
-                buttonLink='/'
-              /> */}
-            </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </>
   )

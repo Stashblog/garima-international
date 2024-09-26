@@ -39,10 +39,15 @@ import v1 from './placeholders/v1.jpg'
 import v2 from './placeholders/v2.jpg'
 import v3 from './placeholders/v3.jpg'
 import v4 from './placeholders/v4.jpg'
+import h1 from './placeholders/h1.jpeg'
+import h2 from './placeholders/h2.jpeg'
+import h3 from './placeholders/h3.jpeg'
 const main = {
   noImage,
   Home,
-
+  h1,
+  h2,
+  h3,
   g1,
   g2,
   g3,

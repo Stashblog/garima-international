@@ -29,7 +29,7 @@ export default function Main({ fullscreen, setFullscreen }) {
         <div className={s.left}>
           <Link to='/home'>
             <div className={s.img}>
-              <img src={images.gilogo} alt='' />
+              <img src={images.Home} alt='' />
             </div>
             <span>Garima International</span>
           </Link>
