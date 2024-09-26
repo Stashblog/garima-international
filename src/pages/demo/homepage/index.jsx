@@ -1,4 +1,3 @@
-import { Card } from 'components'
 import s from './styles.module.scss'
 import { useEffect } from 'react'
 import images from 'images'
