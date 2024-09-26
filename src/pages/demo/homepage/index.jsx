@@ -2,13 +2,8 @@ import { Card } from 'components'
 import s from './styles.module.scss'
 import { useEffect } from 'react'
 import images from 'images'
-
 // Array of banners for demonstration
-const banners = [
-  images.h1, // Replace with actual banner image paths
-  images.h2,
-  images.h3
-]
+const banners = [images.h1, images.h2, images.h3]
 
 export default function Main() {
   useEffect(() => {
@@ -42,35 +37,27 @@ export default function Main() {
   return (
     <>
       <div className={s.main}>
-<<<<<<< HEAD
-        {/* <div className={s.dashboard}> */}
-        <div className={s.content + ' indent'}>
-          <div className={'swiper topBanners ' + s.swiperContainer}>
-=======
         <div className={s.dashboard}>
           <div className={s.content + ' indent'}>
-            <img src={images.Home} />
-            {/* 
-         <div className={'swiper topBanners ' + s.swiperContainer}>
->>>>>>> dcdcdc1ade09ea7997c63b58d59f1a4f55e661a5
-            <div className='swiper-wrapper'>
-              {/* Ensure banners is an array and map over it */}
-              {Array.isArray(banners) && banners.length > 0 ? (
-                banners.map((banner, i) => (
-                  <div className={s.slide + ' swiper-slide'} key={i}>
-                    <img src={banner} alt={`banner-${i}`} />
-                  </div>
-                ))
-              ) : (
-                <p>No banners available</p>
-              )}
+            <div className={'swiper topBanners ' + s.swiperContainer}>
+              <div className='swiper-wrapper'>
+                {/* Ensure banners is an array and map over it */}
+                {Array.isArray(banners) && banners.length > 0 ? (
+                  banners.map((banner, i) => (
+                    <div className={s.slide + ' swiper-slide'} key={i}>
+                      <img src={banner} alt={`banner-${i}`} />
+                    </div>
+                  ))
+                ) : (
+                  <p>No banners available</p>
+                )}
+              </div>
+              <div className='swiper-button-next'></div>
+              <div className='swiper-button-prev'></div>
+              <div className='swiper-pagination'></div>
             </div>
-            <div className='swiper-button-next'></div>
-            <div className='swiper-button-prev'></div>
-            <div className='swiper-pagination'></div>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </>
   )

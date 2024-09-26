@@ -87,21 +87,11 @@ const ProductDescription = ({ product }) => {
                   alt={relatedProduct.title}
                   className={s.relatedProductImage}
                 />
-<<<<<<< HEAD
                 <div className={s.viewButton}>
                   <Link to={`/product/${relatedProduct.id}`} target='_blank'>
                     View
                   </Link>
                 </div>
-=======
-                {
-                  <div className={s.viewButton}>
-                    <Link to={`/product/${relatedProduct.id}`} target='_blank'>
-                      View
-                    </Link>
-                  </div>
-                }
->>>>>>> dcdcdc1ade09ea7997c63b58d59f1a4f55e661a5
               </div>
             ))}
           </div>
