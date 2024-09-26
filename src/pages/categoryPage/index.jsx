@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import s from './styles.module.scss'
 import images from 'images'
 import { catalogues, products } from 'data'
+import { head } from 'helpers'
 
 const filter = [
   { value: 'all', name: 'All' },
@@ -22,6 +23,10 @@ export default function CategoryPage() {
   const navigate = useNavigate()
   const [sortOrder, setSortOrder] = useState('newToOld')
   const [filterType, setFilterType] = useState('all')
+
+  useEffect(() => {
+    head({ title: category })
+  }, [category])
 
   const getProductsAndCatalogues = () => {
     const res = []

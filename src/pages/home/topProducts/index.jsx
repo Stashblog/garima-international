@@ -12,7 +12,9 @@ export default function Main() {
           (product, i) =>
             i < 6 && (
               <div key={product.id} className={s.productCard}>
-                <img src={images[product.imageUrl]} alt={product.title} />
+                <div className={s.image}>
+                  <img src={images[product.imageUrl]} alt={product.title} />
+                </div>
                 <div className={s.productInfo}>
                   <h2>{product.title}</h2>
                 </div>

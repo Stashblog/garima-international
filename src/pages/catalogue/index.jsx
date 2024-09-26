@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import s from './styles.module.scss'
 import images from 'images'
 import { catalogues } from 'data'
+import { useEffect } from 'react'
+import { head } from 'helpers'
 
 const Catalogue = () => {
   const navigate = useNavigate()
@@ -9,6 +11,10 @@ const Catalogue = () => {
   const handleViewCatalogue = id => {
     navigate(`/catalogue/${id}`) // Navigate to Catalogue Description with the catalogue ID
   }
+
+  useEffect(() => {
+    head({ title: 'Catalogues' })
+  }, [])
 
   return (
     <div className={s.cataloguePage + ' indent'}>

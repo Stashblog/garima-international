@@ -63,6 +63,7 @@ const NavLinks = props => (
         key={i}
         to={path}
         className={window.location.hash.substring(1).startsWith(path) ? s.active : ''}
+        // className={window.location.pathname.startsWith(path) ? s.active : ''}
         target={path === '/signIn' ? '_blank' : ''}
         onClick={props.onClickHandler}
       >
@@ -75,7 +76,7 @@ const NavLinks = props => (
 const navLinks = [
   {
     name: 'Home',
-    path: '/demo'
+    path: '/home'
   },
   {
     name: 'Products',

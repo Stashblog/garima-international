@@ -59,12 +59,14 @@
 
   .tags {
     margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
     .tag {
       background-color: #f0f0f0;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
-      margin-right: 0.5rem;
       font-size: 0.9rem;
       color: #666;
     }

@@ -1,7 +1,7 @@
 .masonry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-  grid-gap: 15px; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
 }
 
 .masonryItem {
@@ -23,16 +23,14 @@
   transform: scale(1.05);
 }
 
-
-
 @media (max-width: 768px) {
   .masonry {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .masonry {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
 }

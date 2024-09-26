@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import s from './styles.module.scss'
 
 export default function Main() {
@@ -6,9 +7,9 @@ export default function Main() {
       <div className={s.container}>
         <div className={s.row}>
           <div className={s.col}>
-            <h3 className={s.companyName}>Garima International.</h3>
+            <h3 className={s.companyName}>Global Craft Innovations</h3>
             <p>
-              Garima international, peetal nagri,
+              Global Craft Innovations, peetal nagri,
               <br />
               Moradabad, Uttar Pradesh, India
             </p>
@@ -18,16 +19,16 @@ export default function Main() {
             <h4>Links</h4>
             <ul>
               <li>
-                <a href='/'>Home</a>
+                <Link to='/home'>Home</Link>
               </li>
               <li>
-                <a href='/'>Support</a>
+                <Link to='/contactUs'>Support</Link>
               </li>
               <li>
-                <a href='/'>About</a>
+                <Link to='/aboutUs'>About</Link>
               </li>
               <li>
-                <a href='/'>Contact</a>
+                <Link to='/contactUs'>Contact</Link>
               </li>
             </ul>
           </div>
@@ -39,11 +40,13 @@ export default function Main() {
                 <a href='/'>Terms & Conditions</a>
               </li>
               <li>
-                <a href='/'>Privacy Policies</a>
+                <a href='/'>Privacy Policy</a>
               </li>
               <li className={s.email}>
-                <span className='material-icons'>email</span>
-                admin@garimainternational.com
+                <a href='mailTo:info@globalcraftinnovations.com'>
+                  <span className='material-icons'>email</span>
+                  info@globalcraftinnovations.com
+                </a>
               </li>
 
               <li className={s.socialIcons}>

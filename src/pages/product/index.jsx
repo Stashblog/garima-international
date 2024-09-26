@@ -2,8 +2,14 @@ import s from './styles.module.scss'
 import images from 'images'
 import { Link } from 'react-router-dom'
 import { products } from 'data'
+import { useEffect } from 'react'
+import { head } from 'helpers'
 
 const Product = () => {
+  useEffect(() => {
+    head({ title: 'Products' })
+  }, [])
+
   return (
     <div className={s.productPage + ' indent'}>
       <h1>Our Products</h1>

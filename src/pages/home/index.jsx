@@ -5,12 +5,11 @@ import Homepage from './homepage'
 import TopProducts from './topProducts'
 import TopCatalogues from './topCatalogues'
 import Category from './category'
-import { FAQs } from 'components'
 import NewArrivals from './newArrivals'
 
 export default function Main() {
   useEffect(() => {
-    head({ title: 'Global Craft Innovations' })
+    head({ title: 'Home' })
   }, [])
 
   return (
@@ -26,7 +25,6 @@ export default function Main() {
       <TopCatalogues />
       <NewArrivals />
       <Category />
-      {/* <FAQs /> */}
     </>
   )
 }

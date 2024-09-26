@@ -42,7 +42,7 @@ const Redirect = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    navigate('/demo', { replace: true })
+    navigate('/home', { replace: true })
   }, [navigate])
   return null
 }
@@ -72,10 +72,9 @@ const Auth = ({ children }) => {
   }, [])
 
   useEffect(() => {
-    if (!window.localStorage.getItem('authorization')) navigate('/demo', { replace: true })
+    if (!window.localStorage.getItem('authorization')) navigate('/home', { replace: true })
     else authTest()
   }, [authTest, navigate])
 
   return loading ? <div>loading!!!</div> : <div style={{ overflow: 'hidden' }}>{children}</div>
 }
-

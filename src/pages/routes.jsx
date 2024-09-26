@@ -1,4 +1,4 @@
-import Demo from './demo'
+import Home from './home'
 import Product from './product'
 import Catalogue from './catalogue'
 import AboutUs from './aboutUs'
@@ -10,8 +10,8 @@ import * as Layouts from 'layouts'
 
 const routes = [
   {
-    path: '/demo',
-    Component: Demo,
+    path: '/home',
+    Component: Home,
     Super: Layouts.Home,
     auth: false
   },

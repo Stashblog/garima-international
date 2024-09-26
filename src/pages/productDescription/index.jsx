@@ -16,7 +16,7 @@ const ProductDescription = ({ product }) => {
   const relatedProducts = products.filter(p => p.id !== currentProduct.id)
 
   useEffect(() => {
-    head({ title: currentProduct.title + ' | Global Crafts Innovation' })
+    head({ title: currentProduct.title })
   }, [currentProduct])
 
   return (
@@ -84,7 +84,7 @@ const ProductDescription = ({ product }) => {
                   className={s.relatedProductImage}
                 />
                 <div className={s.viewButton}>
-                  <Link to={`/product/${relatedProduct.id}`} target='_blank'>
+                  <Link className={s.viewProductLink} to={`/product/${relatedProduct.id}`} target='_blank'>
                     View
                   </Link>
                 </div>

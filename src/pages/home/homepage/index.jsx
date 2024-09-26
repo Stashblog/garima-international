@@ -41,7 +41,7 @@ export default function Main() {
             <div className={'swiper topBanners ' + s.swiperContainer}>
               <div className='swiper-wrapper'>
                 {/* Ensure banners is an array and map over it */}
-                {Array.isArray(banners) && banners.length > 0 ? (
+                {Array.isArray(banners) && banners.length ? (
                   banners.map((banner, i) => (
                     <div className={s.slide + ' swiper-slide'} key={i}>
                       <img src={banner} alt={`banner-${i}`} />

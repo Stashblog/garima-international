@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import s from './styles.module.scss' // Adjust the path as necessary
 import images from 'images'
 import { SendQueryForm } from 'components' // Adjust the import based on your file structure
 import { catalogues, products } from 'data'
+import { head } from 'helpers'
 
 const CatalogueDescription = () => {
   const { id } = useParams()
@@ -31,6 +32,10 @@ const CatalogueDescription = () => {
     setIsSelecting(prev => !prev)
     setSelectedProducts(new Set())
   }
+
+  useEffect(() => {
+    head({ title: catalogueItem.title })
+  }, [catalogueItem])
 
   return (
     <div className={s.catalogueDescription + ' indent'}>

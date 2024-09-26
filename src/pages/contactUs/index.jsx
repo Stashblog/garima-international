@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import s from './styles.module.scss'
+import { head } from 'helpers'
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -31,6 +32,10 @@ const ContactUs = () => {
       })
     }, 2000)
   }
+
+  useEffect(() => {
+    head({ title: 'Contact Us' })
+  }, [])
 
   return (
     <div className={s.contactUs + ' indent'}>

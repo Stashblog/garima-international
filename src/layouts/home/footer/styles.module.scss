@@ -51,13 +51,13 @@
           }
         }
 
-        &.email {
+        &.email > a {
           display: flex;
           align-items: center;
           font-size: 1rem;
 
-          .material-icons {
-            margin-right: 10px;
+          & > span {
+            margin-right: 0.25rem;
             font-size: 1.2rem;
             color: var(--c-font-dark);
           }
