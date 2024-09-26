@@ -14,7 +14,10 @@ const ProductDescription = ({ product }) => {
   const currentProduct = product || products.find(p => p.id === parseInt(id)) || products[0]
 
   const relatedProducts = products.filter(p => p.id !== currentProduct.id)
-  useEffect(() => {}, [id])
+
+  useEffect(() => {
+    head({ title: currentProduct.title + ' | Global Crafts Innovation' })
+  }, [currentProduct])
 
   useEffect(() => {
     head({ title: currentProduct.title + ' | Global Crafts Innovation' })
@@ -47,9 +50,11 @@ const ProductDescription = ({ product }) => {
             <p>
               <strong>Category:</strong> {currentProduct.category}
             </p>
-            <p>
-              <strong>Quantity:</strong> {currentProduct.quantity}
-            </p>
+            {!!currentProduct.quantity && (
+              <p>
+                <strong>Quantity:</strong> {currentProduct.quantity}
+              </p>
+            )}
             <p>
               <strong>Product listed on:</strong> {currentProduct.listedOn}
             </p>
@@ -82,11 +87,21 @@ const ProductDescription = ({ product }) => {
                   alt={relatedProduct.title}
                   className={s.relatedProductImage}
                 />
+<<<<<<< HEAD
                 <div className={s.viewButton}>
                   <Link to={`/product/${relatedProduct.id}`} target='_blank'>
                     View
                   </Link>
                 </div>
+=======
+                {
+                  <div className={s.viewButton}>
+                    <Link to={`/product/${relatedProduct.id}`} target='_blank'>
+                      View
+                    </Link>
+                  </div>
+                }
+>>>>>>> dcdcdc1ade09ea7997c63b58d59f1a4f55e661a5
               </div>
             ))}
           </div>

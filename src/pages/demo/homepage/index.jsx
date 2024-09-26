@@ -42,9 +42,17 @@ export default function Main() {
   return (
     <>
       <div className={s.main}>
+<<<<<<< HEAD
         {/* <div className={s.dashboard}> */}
         <div className={s.content + ' indent'}>
           <div className={'swiper topBanners ' + s.swiperContainer}>
+=======
+        <div className={s.dashboard}>
+          <div className={s.content + ' indent'}>
+            <img src={images.Home} />
+            {/* 
+         <div className={'swiper topBanners ' + s.swiperContainer}>
+>>>>>>> dcdcdc1ade09ea7997c63b58d59f1a4f55e661a5
             <div className='swiper-wrapper'>
               {/* Ensure banners is an array and map over it */}
               {Array.isArray(banners) && banners.length > 0 ? (
