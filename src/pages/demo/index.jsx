@@ -10,7 +10,7 @@ import NewArrivals from './newArrivals'
 
 export default function Main() {
   useEffect(() => {
-    head({ title: 'Home' })
+    head({ title: 'Global Craft Innovations' })
   }, [])
 
   return (
