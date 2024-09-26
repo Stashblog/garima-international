@@ -1,101 +1,154 @@
 .productPage {
-  padding: 2rem;
-  background-color: #f4f4f4;
   text-align: center;
+  padding: 20px;
 
   h1 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     color: #333;
-  }
 
-  .productGrid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
-  .productCard {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border-radius: 0px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.05);
+    @media (max-width: 768px) {
+      font-size: 2rem;
     }
 
-    img {
-      width: 100%;
-      height: 65%;
-      object-fit: cover;
-    }
-
-    .productInfo {
-      padding: 1rem;
-      text-align: center;
-
-      h2 {
-        font-size: 1.4rem;
-        color: #333;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #777;
-        margin-top: 0.5rem;
-      }
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-
-      .queryButton {
-        background-color: #c7983c;
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        text-transform: uppercase;
-
-        &:hover {
-          background-color: var(--c-primary-dark);
-        }
-      }
-    }
-
-    &:hover .overlay {
-      opacity: 1;
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
     }
   }
 }
 
-/* Media Queries */
-@media (max-width: 1279px) {
-  .productCard {
-    width: 250px;
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller tablets */
+    grid-gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile devices */
+    grid-gap: 10px;
+  }
+}
+
+.productCard {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 100%; /* Full width of the grid column */
+  max-width: 260px;
+  height: 350px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+  }
+
+  .productInfo {
+    padding: 1rem;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .queryButton {
+      background-color: #c7983c;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: #a77c2d;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 250px;
     height: 350px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  @media (max-width: 768px) {
+    max-width: 200px;
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 180px;
+    height: 280px;
   }
 }

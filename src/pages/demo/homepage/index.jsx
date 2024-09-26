@@ -37,7 +37,7 @@ export default function Main() {
     <>
       <div className={s.main}>
         <div className={s.dashboard}>
-          <div className={s.content + ' indent'}>
+          <div className={s.content}>
             <div className={'swiper topBanners ' + s.swiperContainer}>
               <div className='swiper-wrapper'>
                 {/* Ensure banners is an array and map over it */}

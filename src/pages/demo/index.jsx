@@ -17,7 +17,7 @@ export default function Main() {
     <>
       <div className={s.main}>
         <div className={s.dashboard}>
-          <div className={s.content + ' indent'}>
+          <div className={s.content} style={{ padding: '0' }}>
             <Homepage />
           </div>
         </div>

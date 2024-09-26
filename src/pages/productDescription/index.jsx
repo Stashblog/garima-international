@@ -19,10 +19,6 @@ const ProductDescription = ({ product }) => {
     head({ title: currentProduct.title + ' | Global Crafts Innovation' })
   }, [currentProduct])
 
-  useEffect(() => {
-    head({ title: currentProduct.title + ' | Global Crafts Innovation' })
-  }, [currentProduct])
-
   return (
     <div className={s.productPage + ' indent'}>
       <div className={s.productDetails}>

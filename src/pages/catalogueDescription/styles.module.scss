@@ -65,7 +65,7 @@
     width: 150px; // Set a fixed width for uniformity
     height: 200px; // Set a fixed height for uniformity
     position: relative; // Make positioning relative for absolute elements
-
+    border-radius: 8px;
     &.staticCard {
       cursor: default; // Disable cursor change on hover
       .cardInner {

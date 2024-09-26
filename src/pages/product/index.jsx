@@ -1,7 +1,7 @@
 import s from './styles.module.scss'
 import images from 'images'
 import { Link } from 'react-router-dom'
-import {products} from "data"
+import { products } from 'data'
 
 const Product = () => {
   return (
@@ -13,7 +13,7 @@ const Product = () => {
             <img src={images[product.imageUrl]} alt={product.title} />
             <div className={s.productInfo}>
               <h2>{product.title}</h2>
-              <p>{product.description}</p>
+              {/* <p>{product.description}</p> */}
             </div>
             <div className={s.overlay}>
               <Link to={`/product/${product.id}`}>

@@ -2,85 +2,125 @@
   padding: 2rem 0;
   background-color: #f9f9f9;
   text-align: center;
+}
 
-  .title {
-    font-family: var(--ff-primary);
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    -webkit-text-fill-color: var(--c-black);
-  }
+.title {
+  font-family: var(--ff-primary);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  -webkit-text-fill-color: var(--c-black);
+}
 
+.newArrivalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic resizing */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+/* Ensure two cards per row on mobile screens */
+@media (max-width: 768px) {
   .newArrivalsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
+    gap: 1rem; /* Adjust the gap between the cards */
   }
 
   .productCard {
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
+    padding: 0.8rem;
+    .imageWrapper {
+      height: 150px; /* Adjust the image height for mobile */
+    }
+    .productTitle {
+      font-size: 1rem; /* Smaller font for mobile titles */
+    }
+    .productPrice {
+      font-size: 0.9rem; /* Adjust price font size for mobile */
+    }
+    .buyButton {
+      font-size: 0.9rem; /* Smaller button size */
+      padding: 0.6rem 1.2rem; /* Adjust padding for mobile */
+    }
+  }
+}
+
+/* General product card styling */
+.productCard {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 8px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .imageWrapper {
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
     }
+  }
 
-    .imageWrapper {
-      height: 180px;
-      overflow: hidden;
+  .productTitle {
+    font-family: var(--ff-title);
+    font-size: 1.2rem;
+    font-weight: 600;
+    -webkit-text-fill-color: var(--c-black);
+    margin-bottom: 0.5rem;
+  }
 
-      margin-bottom: 1rem;
+  .productPrice {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 1rem;
+  }
 
-      .productImage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
+  .buyButton {
+    background-color: #c7983c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+    &:hover {
+      background-color: #a77c2d;
     }
+  }
+}
 
-    .productTitle {
-      font-family: var(--ff-title);
-      font-size: 1.2rem;
-      font-weight: 600;
-      -webkit-text-fill-color: var(--c-black);
+/* Tablet view: 2 cards per row */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newArrivalsGrid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 1.5rem; /* Adjust the gap between cards */
+  }
+}
 
-      margin-bottom: 0.5rem;
-    }
-
-    .productPrice {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #777;
-      margin-bottom: 1rem;
-    }
-
-    .buyButton {
-      background-color: #c7983c;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-
-      cursor: pointer;
-      font-size: 1rem;
-      text-transform: uppercase;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #a77c2d;
-      }
-    }
+/* Larger screens (desktops) */
+@media (min-width: 1025px) {
+  .newArrivalsGrid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
   }
 }

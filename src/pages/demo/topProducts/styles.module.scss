@@ -4,29 +4,39 @@
   text-align: center;
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    -webkit-text-fill-color: var(--c-black);
+    padding: 3rem;
   }
 
   .productGrid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+    flex-direction: row;
   }
 
   .productCard {
     position: relative;
-    width: 300px;
+    width: 100px;
     height: 400px;
     background-color: white;
+    border-radius: 8px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 0px;
+
     transition: transform 0.3s ease;
     cursor: pointer;
+
+    @media (min-width: 420px) {
+      width: 150px;
+      height: 250px;
+      font-size: 0.8rem;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -43,7 +53,7 @@
       text-align: center;
 
       h2 {
-        font-size: 1.4rem;
+        font-size: 0.8rem;
         color: #333;
       }
 

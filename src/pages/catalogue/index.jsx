@@ -23,7 +23,7 @@ const Catalogue = () => {
           <div key={item.id} className={s.carouselItem}>
             <img src={images[item.imageSrc]} alt={item.title} />
             <div className={s.carouselText}>
-              <span>{`0${item.id} — ${item.roomType}`}</span>
+              {/* <span>{`0${item.id} — ${item.roomType}`}</span> */}
               <h2>{item.title}</h2>
             </div>
             <div className={s.overlay}>

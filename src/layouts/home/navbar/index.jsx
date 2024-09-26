@@ -31,7 +31,7 @@ export default function Main({ fullscreen, setFullscreen }) {
             <div className={s.img}>
               <img src={images.Home} alt='' />
             </div>
-            <span>Garima International</span>
+            <span>Global Craft Innovations</span>
           </Link>
         </div>
 

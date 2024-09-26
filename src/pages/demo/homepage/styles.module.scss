@@ -1,54 +1,78 @@
+// Base styling for the main banner container
 .main {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  background-size: cover;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover; // Cover the entire viewport width for desktop
 
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    height: auto; /* Allow content to take up necessary space */
+  .swiperContainer {
+    padding: 0 !important;
+    padding-bottom: 2rem;
+
+    .swiper-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      width: 100%; // Ensure slides take full width
+      padding: 2rem;
+      img {
+        width: 100%; // Make sure the image fills the width
+        height: auto; // Maintain aspect ratio
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white; // Customize arrows
+      &:hover {
+        color: #999;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
   }
 }
 
-.swiperContainer {
-  --swiper-navigation-sides-offset: 0rem;
-  padding: 0 2rem;
-  padding-bottom: 2rem;
-
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    padding: 0 1rem;
-    padding-bottom: 1rem; /* Reduce bottom padding for mobile */
-  }
-}
-
+// Desktop settings (default)
 .dashboard {
-  padding: 0 1rem;
-  height: 100%;
+  width: 100%;
+  padding: 0;
 
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    padding: 0; /* Remove padding to fit the swiper better */
-    height: auto; /* Allow height to adjust based on content */
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & > div {
+      align-self: flex-end;
+    }
   }
 }
 
-.content {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  & > div {
-    align-self: flex-end;
-  }
+// Media query for responsive/mobile view
+@media (max-width: 768px) {
+  .main {
+    background-size: contain; // Contain the image for smaller screens
+    height: auto; // Adjust height automatically
 
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center; /* Center content */
-    height: auto; /* Adjust height to content */
+    .swiperContainer {
+      padding: 0 !important;
+      .swiper-slide {
+        width: 100%; // Full width for mobile
+        img {
+          height: 300px; // Adjust height for better mobile experience
+          object-fit: cover; // Ensure the image covers the container properly
+        }
+      }
+    }
   }
 }

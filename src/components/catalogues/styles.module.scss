@@ -5,7 +5,7 @@
   position: relative; /* For absolute positioning of overlay */
   overflow: hidden;
   background-color: #fff; /* Solid background color */
-  border-radius: 0px; /* Rounded corners */
+  border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition:
     transform 0.3s ease,
@@ -13,11 +13,11 @@
   max-width: 350px; /* Limit width */
   margin: 20px; /* Space between cards */
   cursor: pointer;
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-  }
+.imageCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .imageWrapper {
@@ -31,10 +31,10 @@
   height: 100%;
   object-fit: cover; /* Cover the entire area */
   transition: transform 0.3s ease;
+}
 
-  &:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
+.image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .overlay {
@@ -49,26 +49,26 @@
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-
-  .viewButton {
-    background-color: #c7983c;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 0px; /* Rounded button */
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #a77c2d; /* Darker on hover */
-    }
-  }
 }
 
 .imageCard:hover .overlay {
   opacity: 1; /* Show overlay on hover */
+}
+
+.viewButton {
+  background-color: #c7983c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0px; /* Rounded button */
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.viewButton:hover {
+  background-color: #a77c2d; /* Darker on hover */
 }
 
 .title {
@@ -77,4 +77,42 @@
   color: #333; /* Dark text color */
   text-align: center;
   font-weight: 600; /* Slightly bolder */
+}
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .imageCard {
+    max-width: 300px; /* Reduce card width */
+  }
+
+  .imageWrapper {
+    height: 180px; /* Adjust image height */
+  }
+
+  .title {
+    font-size: 1.1rem; /* Slightly smaller font */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .imageCard {
+    max-width: 100%; /* Full width on mobile */
+    margin: 10px; /* Reduce margin */
+  }
+
+  .imageWrapper {
+    height: 150px; /* Smaller image height */
+  }
+
+  .viewButton {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 0.6rem 1.2rem; /* Adjust button size */
+  }
+
+  .title {
+    font-size: 0.8rem; /* Smaller title for mobile */
+  }
 }
