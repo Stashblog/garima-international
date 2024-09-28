@@ -47,7 +47,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
   // padding-top: 0;
   padding-left: 0.5rem;
 
@@ -59,29 +59,18 @@
 
     .img {
       display: flex;
-      align-items: flex-start;
-      height: 2rem;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
       width: 250px;
-      transform: scale(1.5);
 
       & > img {
-        height: 98%;
+        height: 100%;
         width: 100%;
         object-fit: contain;
-        transform: scale(1.2);
-        @media (max-width: 480px) {
-          height: 98%;
-          width: 400%;
-          object-fit: contain;
-          transform: scale(1.2);
-        }
-      }
-      @media (max-width: 480px) {
-        width: 200px;
-        transform: scale(0.6);
-        align-items: flex-start;
       }
     }
+
     & > span {
       font-size: 1rem;
       font-weight: 600;
