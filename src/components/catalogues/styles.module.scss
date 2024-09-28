@@ -10,9 +10,14 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  max-width: 350px; /* Limit width */
+  max-width: 250px; /* Limit width */
   margin: 20px; /* Space between cards */
   cursor: pointer;
+  @media (max-width: 480px) {
+    max-width: 100px;
+    height: 180px;
+    margin-left: 1.5rem;
+  }
 }
 
 .imageCard:hover {
@@ -83,9 +88,9 @@
 
 /* Tablet View */
 @media (max-width: 1024px) {
-  .imageCard {
-    max-width: 300px; /* Reduce card width */
-  }
+  // .imageCard {
+  //   max-width: 300px; /* Reduce card width */
+  // }
 
   .imageWrapper {
     height: 180px; /* Adjust image height */

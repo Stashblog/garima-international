@@ -31,7 +31,7 @@ export default function Main({ fullscreen, setFullscreen }) {
             <div className={s.img}>
               <img src={images.Home} alt='' />
             </div>
-            <span>Global Craft Innovations</span>
+            {/* <span>Global Craft Innovations</span> */}
           </Link>
         </div>
 

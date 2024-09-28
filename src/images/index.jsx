@@ -1,6 +1,6 @@
 import noImage from './placeholders/noImage.png'
 
-import Home from './placeholders/home.jpg'
+import Home from './placeholders/Home.png'
 
 import g1 from './placeholders/g1.jpg'
 import g2 from './placeholders/g2.jpg'

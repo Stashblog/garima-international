@@ -28,6 +28,9 @@
     grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
     gap: 1rem; /* Adjust the gap between the cards */
   }
+  .title {
+    font-size: 1.2rem;
+  }
 
   .productCard {
     padding: 0.8rem;
