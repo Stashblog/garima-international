@@ -19,6 +19,7 @@ const Categories = () => {
           onClick={() => handleCategoryClick(image.category)}
         >
           <img src={images[image.src]} alt={image.alt} className={s.masonryImage} />
+          <div className={s.categoryName}>{image.category}</div>
         </div>
       ))}
     </div>

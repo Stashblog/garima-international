@@ -15,7 +15,7 @@ const NewArrivals = () => {
                 <div className={s.imageWrapper}>
                   <img src={images[product.imageUrl]} alt={product.name} className={s.productImage} />
                 </div>
-                <h3 className={s.productTitle}>{product.name}</h3>
+
                 <Link to={`/product/${product.id}`}>
                   <button className={s.buyButton}>View Product</button>
                 </Link>

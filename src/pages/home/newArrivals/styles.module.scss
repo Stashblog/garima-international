@@ -1,129 +1,99 @@
 .newArrivalsSection {
-  padding: 2rem 0;
+  padding: 2rem 1rem; // Padding for spacing
   background-color: #f9f9f9;
   text-align: center;
+
+  @media (max-width: 480px) {
+    padding: 1rem; // Adjust padding for smaller screens
+  }
 }
 
 .title {
-  font-family: var(--ff-primary);
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
   -webkit-text-fill-color: var(--c-black);
+  padding: 3rem;
+  margin-bottom: 2rem; // Increased margin for spacing
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // Shadow for depth
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 }
 
 .newArrivalsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic resizing */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); // Responsive columns
+  gap: 1.5rem; // Gap between items
   max-width: 1200px;
-  margin: 0 auto;
-  flex-direction: row;
-}
+  margin: 0 auto; // Center the grid
 
-/* Ensure two cards per row on mobile screens */
-@media (max-width: 768px) {
-  .newArrivalsGrid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
-    gap: 1rem; /* Adjust the gap between the cards */
-  }
-  .title {
-    font-size: 1.2rem;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Two products per row on mobile
+    gap: 1rem; // Reduce gap for smaller devices
   }
 
-  .productCard {
-    padding: 0.8rem;
-    .imageWrapper {
-      height: 150px; /* Adjust the image height for mobile */
-    }
-    .productTitle {
-      font-size: 1rem; /* Smaller font for mobile titles */
-    }
-    .productPrice {
-      font-size: 0.9rem; /* Adjust price font size for mobile */
-    }
-    .buyButton {
-      font-size: 0.9rem; /* Smaller button size */
-      padding: 0.6rem 1.2rem; /* Adjust padding for mobile */
-    }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); // Ensures two columns on very small screens
   }
 }
 
-/* General product card styling */
 .productCard {
   background-color: #fff;
-  padding: 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+  overflow: hidden; // Hide overflow
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border-radius: 8px;
+    box-shadow 0.3s ease; // Smooth transitions
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); // Lift effect on hover
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Darker shadow on hover
   }
 
   .imageWrapper {
-    height: 180px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-  }
+    height: 200px; // Consistent image height
+    overflow: hidden; // Hide overflow
+    display: flex;
+    justify-content: center; // Center the image
+    align-items: center; // Center the image
+    background-color: #f1f1f1; // Light background for image placeholder
 
-  .productImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    .productImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Cover the area without distortion
+      transition: transform 0.3s ease;
 
-    &:hover {
-      transform: scale(1.05);
+      &:hover {
+        transform: scale(1.05); // Zoom effect on hover
+      }
     }
-  }
-
-  .productTitle {
-    font-family: var(--ff-title);
-    font-size: 1.2rem;
-    font-weight: 600;
-    -webkit-text-fill-color: var(--c-black);
-    margin-bottom: 0.5rem;
-  }
-
-  .productPrice {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #777;
-    margin-bottom: 1rem;
   }
 
   .buyButton {
-    background-color: #c7983c;
+    background-color: #c7983c; // Button color
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.5rem; // Button padding
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase; // Uppercase text
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease; // Button transitions
 
     &:hover {
-      background-color: #a77c2d;
+      background-color: #a77c2d; // Darker button on hover
+      transform: translateY(-2px); // Lift effect on hover
     }
-  }
-}
-
-/* Tablet view: 2 cards per row */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .newArrivalsGrid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    gap: 1.5rem; /* Adjust the gap between cards */
-  }
-}
-
-/* Larger screens (desktops) */
-@media (min-width: 1025px) {
-  .newArrivalsGrid {
-    grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.7rem;
+    }
   }
 }
