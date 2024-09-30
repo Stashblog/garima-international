@@ -94,6 +94,9 @@
     @media (max-width: 480px) {
       font-size: 0.8rem;
       padding: 0.4rem 0.7rem;
+      .buyButton {
+        width: fit-content;
+      }
     }
   }
 }
