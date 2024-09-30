@@ -9,13 +9,17 @@
 .topCatalogues {
   padding: 2rem;
   align-content: center;
+  justify-content: center;
 }
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center; /* Center the grid */
+  margin: 5px auto; /* Auto margin to center grid horizontally */
+  max-width: 800px; /* Limit width to make it more centered */
+  align-items: center;
 }
 
 @media (max-width: 1279px) {
@@ -37,5 +41,8 @@
 @media (max-width: 768px) {
   .cardGrid {
     grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
+    // grid-template-columns: 1fr; /* Single column for mobile view */
+    gap: 15px;
+    margin: 0 auto; /* Center grid for mobile */
   }
 }
